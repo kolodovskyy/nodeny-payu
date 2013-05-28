@@ -8,10 +8,9 @@
 - Изменить настройки скрипта payu.pl (MERCHANT, SECRET_KEY)
 - При необходимости указать нужную платежную категорию в payu.pl (CATEGORY)
 - Обеспечить доступность payu.pl через web только с сети 83.96.157.64/27 (apache, nginx)
-- Создать файл /usr/local/nodeny/module/payu.log и установить права записи для веб-сервера
-  (chown www:wheel /usr/local/nodeny/module/payu.log)
 - Скопировать Spayu.pl в директорию /usr/local/nodeny/web
 - Изменить настройки скрипта Spayu.pl (MERCHANT, SECRET_KEY)
+- Изменить STAT_HOST в скрипте Spayu.pl на реальный хост статистики (например, stat.provider.ua)
 - Добавить модуль в конфигурацию модулей биллинга (аналогично вложенному plugin_reestr.cfg)
 - Исправить скрипт биллинга /usr/local/nodeny/web/paystype.pl аналогично вложенному,
   чтобы корректно отображалась новая платежная категория (можно не делать этого, а использовать одну из
