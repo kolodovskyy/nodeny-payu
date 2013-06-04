@@ -31,7 +31,7 @@ sub PY_main
   &Message("<h2>Оплата через PayU</h2><br><b>ФИО:</b> $pm->{fio}<br><b>Номер договора:</b> $pm->{name}<br><b>Текущий тарифный план: </b>$paket->{name}<br><b>Стоимость: </b>$paket->{price}&nbsp$gr");
   
   if ($F{process} && $F{amount} >= 10) {
-    $iconv = Text::Iconv->new("windows-1251", "utf8");
+    $iconv = Text::Iconv->new("windows-1251", "utf-8");
 
     my($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=CORE::localtime(time);
     $ORDER_DATE = sprintf "%4d-%02d-%02d %02d:%02d:%02d",$year+1900,$mday,$mon+1,$hour,$min,$sec;
