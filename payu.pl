@@ -55,7 +55,7 @@ sub ret
 
 if ($REFNOEXT && $AMOUNT && 
     &sql_select_line($dbh, "SELECT id FROM users WHERE id='$REFNOEXT'") &&
-    !&sql_select_line($dbh, "SELECT id FROM pays WHERE category='$CATEGORY' AND reason='$REFNOEXT'")) {
+    !&sql_select_line($dbh, "SELECT id FROM pays WHERE category='$CATEGORY' AND reason='$REFNO'")) {
 
   $dbh->do("INSERT INTO pays SET
     mid='$REFNOEXT',
